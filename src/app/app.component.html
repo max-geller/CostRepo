@@ -1,4 +1,146 @@
-<mat-toolbar>COST REPOSITORY</mat-toolbar>
-<h4>This is the Cost Repo Application!</h4>
+<mat-toolbar>COST REPOSITORY
+    <mat-nav-list fxLayout="row">
+        <mat-list-item>Projects</mat-list-item>
+        <mat-list-item>Categories</mat-list-item>
+        <mat-list-item>Systems</mat-list-item>
+        <mat-list-item>Settings</mat-list-item>
+    </mat-nav-list>
+</mat-toolbar>
+<h1>This is the Cost Repo Application!</h1>
 <router-outlet></router-outlet>
+<mat-card>
+    <mat-card-header>
+      <mat-card-title>Search Projects</mat-card-title>
+      <mat-card-subtitle>subtitle</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-form-field>
+        <mat-label>Project</mat-label>
+        <select matNativeControl>
+            <optgroup label="Recent">
+            <option value="volvo">SFO Terminal 3 West Modernization</option>
+            </optgroup>
+            <optgroup label="Active">
+                <option value="volvo">SFO Terminal 3 West Modernization</option>
+                <option value="saab">BART Controls Modernization</option>
+                <option value="saab">Golden Gate Tennis Center</option>
+            </optgroup>
+            <optgroup label="Completed">
+            <option value="mercedes">SFO Terminal 1C/BAB</option>
+            <option value="audi">Gilead NB357 Pilot Lab</option>
+            <option value="hyatt">SFO Grand Hyatt Hotel</option>
+            <option value="tx">SFO Substation TX Bypass & Upgrade</option>
+            </optgroup>
+        </select>
+    </mat-form-field>
 
+    <mat-form-field>
+        <mat-label>Cost Source</mat-label>
+        <select matNativeControl>
+        <optgroup label="Estimates">
+            <option value="volvo">100% DD HCI Estimate</option>
+            <option value="saab">50% CD HCI Estimate</option>
+        </optgroup>
+        <optgroup label="Models">
+            <option value="mercedes">10/17/18 Preliminary Cost Model</option>
+            <option value="audi">5/3/19 Structural Cost Model</option>
+        </optgroup>
+        <optgroup label="Contracts">
+            <option value="mercedes">TCCo As-Built</option>
+            <option value="audi">Rosendin Electric As-Built Cost</option>
+        </optgroup>
+        </select>
+    </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>Ok</button>
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-content>
+      <mat-form-field>
+        <mat-label>Source</mat-label>
+        <select matNativeControl>
+            <optgroup label="General Building and Construction">
+                <option value="volvo">Hollins Consulting, Inc.</option>
+                <option value="saab">Engineering News and Review (ENR)</option>
+                <option value="saab">Turner Construction Company</option>
+                <option value="saab">Rider Levett Bucknall</option>
+                <option value="saab">Leland Saylor Costs</option>
+                <option value="volvo">RS Means</option>
+            </optgroup>
+            <optgroup label="Trade-Specific">
+                <option value="saab">National Electrical Contractors Association (NECA)</option>
+            <option value="mercedes">Mechanical Contractors Association of America (MCAA)</option>
+            </optgroup>
+            <optgroup label="National Economic Performace">
+                <option value="saab">US Bureau of Labor Statistics</option>
+                <option value="saab">US Bureau of Labor Statistics</option>
+                <option value="saab">Automatic Data Processing, Inc. (ADP)</option>
+            </optgroup>
+        </select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Index</mat-label>
+        <select matNativeControl>
+            <option value="volvo">HCI Construction Cost Index</option>
+            <option value="volvo">RS Means Commercial Construction</option>
+            <option value="saab">ENR Building Cost Index</option>
+            <option value="saab">Turner Building Cost Index</option>
+            <option value="saab">Turner Actual Cost Index</option>
+            <option value="saab">Rider Levett Bucknall Actual Cost Inde</option>
+            <option value="saab">Mortenson Cost Bureau of Labor Statistics Producer Price Index</option>
+            <option value="saab">Leland Saylor Costs</option>
+            <option value="saab">PPI New Nonrsidential Construction</option>
+            <option value="saab">PPI New Nonrsidential Building Types</option>
+            <option value="saab">PPI Materials and Supply Inputs to Construction Industries</option>
+            <option value="saab">RS Means Key Material Cost Updates</option>
+            <option value="saab">National Highway Construction Cost Index</option>
+            <option value="saab">IHS Power Plant Cost Indices</option>
+            <option value="saab">The Bureau of Reclamation Construction Cost Index</option>
+            <option value="saab">S&P/Case-Shiller National Home Price Index</option>
+            <option value="saab">Beck BiAnnual Cost Report</option>
+            <option value="saab">Consumer Price Index</option>
+            <option value="saab">Jones Lang LaSalle</option>
+            <option value="saab">ADP Jobs Report</option>
+            <option value="saab">SF Business Times Lists</option>
+            <option value="saab">Peuget Sound Business Times</option>
+            <option value="saab">Los Angeles Business Times</option>
+            <option value="saab">Sierra West Construction Cost Index</option>
+            <option value="saab">DGS California Construction Cost Index CCCI</option>
+            <option value="saab">Vermeulens Construction Cost Index</option>
+            <option value="saab">New York Building Congress New York City Construction Costs</option>
+            <option value="saab">U S Army Civil Works Construction Cost Index CWCCIS</option>
+            <option value="saab">Turner And Townsend International Construction Markets</option>
+            <option value="saab">US Historical Construction Cost Indices 1800s to 1957</option>
+        </select>
+      </mat-form-field>
+    </mat-card-content>
+  </mat-card>
+
+  
+<mat-card>
+    <mat-card-content>
+
+      <div class="example-section">
+        <mat-checkbox class="example-margin" [(ngModel)]="checked">Checked</mat-checkbox>
+        <mat-checkbox class="example-margin" [(ngModel)]="indeterminate">Indeterminate</mat-checkbox>
+      </div>
+  
+      <div class="example-section">
+        <label class="example-margin">Escalation Method:</label>
+        <mat-radio-group [(ngModel)]="labelPosition">
+          <mat-radio-button class="example-margin" value="after">Turner Building Cost Index</mat-radio-button>
+          <mat-radio-button class="example-margin" value="before">Consumer Price Index</mat-radio-button>
+        </mat-radio-group>
+    </div>
+    </mat-card-content>
+  </mat-card>
+
+<mat-list>
+    <mat-list-item>Checkbox/Slide Filters</mat-list-item>
+    <mat-list-item>Cost Per Square Footage (Scatter Chart by System)</mat-list-item>
+    <mat-list-item>Cost Escalation (Line Chart by Project Type)</mat-list-item>
+</mat-list>
