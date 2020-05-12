@@ -1,0 +1,28 @@
+<div class="page-container" fxLayout="row" fxLayoutAlign="space-evenly" fxFlex>
+
+ <!--Carousel Area-->
+  <div class="slide-area" ></div>
+ <!--Login Area-->
+  <div class="login-area" fxLayout="column" >
+
+    <div class="login-container" fxLayout="column" fxLayoutAlign="start center">
+      <!--Sessions Header-->
+
+      <div class="login-logo"><img src="assets/images/logo.png" height="80px" /></div>
+
+      <!--Sessions Router-->
+      <main [@routerTransition]="getState(o)">
+        <router-outlet #o="outlet"></router-outlet>
+      </main>
+    </div>
+    <!--Sessions Footer-->
+    <div class="sessions-footer" fxLayout="column" fxLayoutAlign="center center" >
+      <mat-nav-list class="list-container">
+        <mat-list-item [routerLink]="['/sessions/login']">LOGIN</mat-list-item>
+        <mat-list-item [routerLink]="['/sessions/request']">REQUEST ACCESS</mat-list-item>
+        <mat-list-item [routerLink]="['/sessions/forgot']">FORGOT PASSWORD</mat-list-item>
+        <mat-list-item [routerLink]="['/sessions/privacy']">PRIVACY POLICY</mat-list-item>
+      </mat-nav-list>
+    </div>
+  </div>
+</div>

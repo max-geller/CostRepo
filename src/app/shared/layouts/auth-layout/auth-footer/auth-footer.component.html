@@ -1,0 +1,17 @@
+<mat-toolbar>
+  <div class="logo-container" fxLayout="column">
+  <img src="assets/images/white-logo.png" />
+  </div>
+  <div class="footer-details" fxLayout="row wrap" fxFlex>
+    <mat-chip-list class="footer-chips" fxLayout="column" fxShow="true" fxHide.lt-sm="true">
+      <mat-chip color="accent" routerLink='/admin'>ADMIN VIEW</mat-chip>
+      <mat-chip color="accent" routerLink='/team'>TEAMS VIEW</mat-chip>
+      <mat-chip color="accent" routerLink='/client'>CLIENT VIEW</mat-chip>
+      <mat-chip color="accent" >DOCS</mat-chip>
+    </mat-chip-list>
+  </div>
+
+  <div class="copyright-item" fxLayout="column" fxLayoutAlign="center end" fxFlex>
+    <h3>© 2020, Hollins Consulting, Inc.</h3>
+  </div>
+</mat-toolbar>

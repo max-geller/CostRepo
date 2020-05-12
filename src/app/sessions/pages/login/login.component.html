@@ -1,0 +1,36 @@
+<div class="page-container" fxLayout="column" fxLayoutAlign="center center">
+  <div class="mat-card-title">Let's get you logged in...</div>
+
+    <form class="form-container" #loginForm="ngForm" fxLayout="column" fxLayoutAlign="space-evenly center" >
+      <mat-form-field class="full-width">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" id="inputEmail" [(ngModel)]="email" name="Email" placeholder="Email" #emailInput />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <mat-label>Password</mat-label>
+        <input
+          matInput
+          type="password"
+          id="inputPassword"
+          [(ngModel)]="password"
+          name="Password"
+          placeholder="Password"
+          #passwordInput
+        />
+      </mat-form-field>
+
+      <mat-card-actions>
+        <div fxLayout="row" fxLayoutAlign="space-evenly center">
+          <button
+            mat-raised-button
+            color="primary"
+            type="submit"
+            (click)="emailSignIn()"
+          >
+            Login
+          </button>
+        </div>
+        <br />
+      </mat-card-actions>
+    </form>
+</div>

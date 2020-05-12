@@ -1,0 +1,43 @@
+.footer-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.mat-toolbar {
+  height: 80px;
+  background-color: #212953;
+  align-content: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100vw;
+  h3 {
+      font-size: small;
+      color: rgb(255, 255, 255);
+      margin: 0px;
+  }
+  p {
+    font-size: x-small;
+    margin: 0px;
+    color: #ffffff;
+
+  }
+  .mat-chip {
+    font-size: x-small;
+    }
+  img {
+    display: flex;
+    height: 4vh;
+    }
+}
+
+.footer-details {
+padding-left: 30px;
+}
+
+@media (max-height: 650px) {
+.footer-container {
+  height: 80px;
+}
+}
